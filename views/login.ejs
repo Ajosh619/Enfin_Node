@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='icon' href="<%= baseUrl %>images/download (3).png" />
+    <link rel='stylesheet' href='<%=baseUrl%>stylesheets/style.css' />
+    <link href="<%=baseUrl%>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%=baseUrl%>vendor/metisMenu/metisMenu.min.css" rel="stylesheet"> 
+    <link href="<%=baseUrl%>dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="<%=baseUrl%>vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="<%=baseUrl%>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>    
+<div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center"><b>Please Sign In</b></h3>
+                    </div>
+                    <div class="panel-body">
+                        <% if(locals.error){%>
+                            <i style="color: red"><%= error%></i>
+                        <% }%>
+
+                       
+                        <form method="POST">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
+                                <a href="/register" class="btn btn-lg btn-success btn-block">Register</a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include('footer')%>    

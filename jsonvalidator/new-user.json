@@ -1,0 +1,28 @@
+{
+    "title": "new user",
+    "description": "describes properties required to create a user",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "firstname of the account user",
+        "pattern": "^[a-zA-Z ]*$"
+      },
+      "email": {
+        "type": "string",
+        "description": "email of the account user",
+        "format": "email"
+      },
+      "password": {
+        "type": "string",
+        "description": "Password"
+        
+      },
+      "confirm_password": {
+        "type": "string",
+        "description": "Confirm Password"
+        
+      }
+    },
+    "required": ["name", "email", "password","confirm_password"]
+  } 

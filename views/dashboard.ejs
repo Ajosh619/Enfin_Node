@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='icon' href="<%= baseUrl %>images/download (3).png" />
+    <link rel='stylesheet' href='<%=baseUrl%>stylesheets/style.css' />
+    <link href="<%=baseUrl%>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%=baseUrl%>vendor/metisMenu/metisMenu.min.css" rel="stylesheet"> 
+    <link href="<%=baseUrl%>dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="<%=baseUrl%>vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="<%=baseUrl%>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>    
+        
+  
+<%- include('navbar') %>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Dashboard</h1>
+    </div>      
+</div>
+
+<script src="<%= baseUrl %>vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="<%= baseUrl %>vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="<%= baseUrl %>vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="<%= baseUrl %>vendor/raphael/raphael.min.js"></script>
+    <script src="<%= baseUrl %>vendor/morrisjs/morris.min.js"></script>
+    <script src="<%= baseUrl %>data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="<%= baseUrl %>javascripts/userview.js"></script>
+    
+    <script src="<%= baseUrl %>javascripts/sb-admin-2.js"></script>
+
+</body>
+</html>
