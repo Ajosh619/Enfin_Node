@@ -99,7 +99,7 @@ router.post('/profile-image-upload/:id', upload.single("imagefile"), async funct
 		//console.log(oldFileName);
 		if(req.file){
 
-			var edituser = await userService.updateUser( {_id: o_id},
+			var edituser = await userService.updateUser( { _id: o_id },
 			{ $set: 
 				{ 	imagefile: req.file.originalname, 
 					  image: req.file.filename

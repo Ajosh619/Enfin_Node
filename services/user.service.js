@@ -25,6 +25,11 @@ module.exports.getUser = function(query = {}) {
 
 }; 
 
+module.exports.deleteUser = function(query = {}) {
+    return User.deleteOne( query ).exec();//lean....load document as a plain javascript
+    //db.inventory.remove( { type : "food" } )
+ }; 
+
 /**
  * update
  * @param {*} query y

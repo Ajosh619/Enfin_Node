@@ -9,6 +9,7 @@ var logger = require('morgan');
 //mongo db
 var mongoose = require('mongoose');
 var jwt = require('express-jwt');
+var cors = require('cors')
 //mongo db connection
 mongoose.connect(config.mongodbUrl);
 var db = mongoose.connection;
@@ -32,8 +33,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser(config.cookie_secret));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use(cors())
 app.use('/', indexRouter);
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// })
 app.use('/users',jwt({
   secret: config.secret,//secret key
   getToken: function fromHeaderOrQuerystring (req) {
